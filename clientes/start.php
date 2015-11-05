@@ -1,9 +1,9 @@
 <?php
 /**
 *
-* Aplicativo de Clientes | lliure 6.x
+* Aplicativo de Clientes
 *
-* @Versão 4.1
+* @Versão 5
 * @Desenvolvedor Jeison Frasson <jomadee@lliure.com.br>
 * @entre em contato com o desenvolvedor <jomadee@lliure.com.br> http://www.lliure.com.br/
 * @licença http://opensource.org/licenses/gpl-license.php GNU Public License
@@ -16,11 +16,11 @@ $llAppTable = PREFIXO."clientes";
 
 
 $botoes = array(
-	array('href' => $backReal, 'img' => $plgIcones.'br_prev.png', 'title' => $backNome)
+	array('href' => $backReal, 'fa' => 'fa-chevron-left', 'title' => $backNome)
 	);
 
 if(!isset($_GET['id']))
-	$botoes[] = array('href' => $_ll['app']['onserver'].'&ac=new', 'img' => $plgIcones.'user.png', 'title' => 'Adicionar cliente', 'attr' => 'class="criar"');
+	$botoes[] = array('href' => $_ll['app']['onserver'].'&ac=new', 'fa' => 'fa-user', 'title' => 'Adicionar cliente', 'attr' => 'class="criar"');
 
 echo app_bar('Administração de clientes', $botoes);
 
